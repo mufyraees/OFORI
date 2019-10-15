@@ -1,0 +1,117 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+
+
+input[type=text], input[type=password] {
+    width: 25%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: deeppink;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 15%;
+}
+
+button:hover 
+   {
+    opacity: 0.8;
+   }
+
+.imgcontainer
+   {
+    text-align: center;
+    margin: 24px 0 12px 0;
+   }
+
+img.avatar 
+   {
+    width: 40%;
+    border-radius: 50%;
+   }
+
+.container 
+   {
+    padding: 5px;
+    }
+
+span.psw 
+   {
+    float: right;
+    padding-top: 16px;
+   }
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) 
+    {
+    span.psw 
+     {
+       display: block;
+       float: none;
+      }
+    
+}
+ 
+   .back{
+        background-repeat: no-repeat; 
+        width:100%;
+        background-size: cover;
+        height: 75%; 
+        }
+       h1{
+text-align: center;
+    text-transform: uppercase;
+    color: mediumvioletred;
+}
+           
+
+
+ p{text-align: center;
+ letter-spacing: 3px;}
+   
+</style>
+</head>
+<body background="baloon.jpg"class="back">
+    <h1 align="center">OFORI</h1>
+    <p >
+If you want to be Happy, BE !
+</p>
+
+
+<h2>LOGIN PAGE</h2>
+
+
+
+
+<form action="login.php" method="post">
+    
+  <div class="container">
+     <table style="width:90%">
+          <tr>
+    <td><label for="uname"><b>Username</b></label></td>
+    <td colspan="3"><input type="text" placeholder="Enter Username" name="uname" required></td>
+              </tr>
+<tr>
+   <td><label for="psw"><b>Password</b></label></td> 
+    <td><input type="password" placeholder="Enter Password" name="psw" required></td>
+        </tr>
+    <tr><td colspan="3"><button type="submit"><b>Login</b></button></td></tr>
+  </table>
+  
+
+    </div>
+
+</form>
+</body>
+</html>
