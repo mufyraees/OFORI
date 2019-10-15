@@ -1,0 +1,294 @@
+<html>
+    <head>
+        <style>
+            input[type=text] {
+    width: 15%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+input[type=text], select {
+    width: 40%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+
+}
+input[type=number]
+        {
+    width: 40%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=password] {
+    width: 40%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=submit] {
+    width: 40%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+input[type=email] {
+    width: 40%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+/* Set a style for all buttons */
+button {
+    background-color: deeppink;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 20%;
+    text-transform: uppercase;
+    
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    width: 20s%;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+            .back{
+background-repeat: no-repeat; 
+width:100%;
+ 
+background-size: cover;
+height: 75%; 
+}
+       h1{
+text-align: center;
+    text-transform: uppercase;
+    color: mediumvioletred;
+}
+            p{
+text-align: center;
+  
+    letter-spacing: 3px;}
+            /* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 40%;
+    }
+}
+   
+        </style>
+    </head>
+    <body background="baloon.jpg"class="back">
+    <h1 align="center">OFORI</h1>
+    <p >
+If you want to be Happy, BE !
+</p>
+        
+        <p><button onClick="document.getElementById('id01').style.display='block'"><centre>ADD QUESTIONS</centre></button></p><br><br>
+        <div id="id01" class="modal">
+            
+  
+  <form class="modal-content animate" action='question.php' method='post'>
+    
+
+    <div class="container">
+        <center>
+        <table style="width:90%">
+            <th><h2>ADD QUESTION</h2></th>
+
+<tr>
+                <td><label><b>Select user-type</b></label></td>
+                <td>
+        
+                <select name="user">
+  <option value="teacher">Teacher</option>
+  <option value="student">Student</option>
+  
+</select>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td><label><b>Select test</b></label></td>
+                <td>
+        
+                <select name="test">
+  <option value="depression">Depression</option>
+  <option value="anxiety">Anxiety</option>
+  <option value="bipolar">Bipolar</option>
+  <option value="youth">Youth</option>
+</select>
+                </td>
+            </tr>
+            
+       <tr>
+                <td><label><b>Test Level</b></label></td>
+                <td>
+        
+                <select name="level">
+  <option value=1>Level 1</option>
+  <option value=2>Level 2</option>
+  <option value=3>Level 3</option>
+  
+  
+</select>
+                </td>
+            </tr>
+          
+          
+            <tr>
+             <td><label><b>Question:</b></label></td>
+             <td><textarea name="qstn" rows="4" cols="50"></textarea></td>
+             </tr><br>
+             <tr>
+               <td><label><b>choice1:</b></label></td>
+               <td><input type="text" name="choice1">  
+<b>Mark:</b><input type="text" name="m1">
+</td>
+               
+                 
+                 
+
+                 
+</tr>
+
+
+<tr>
+               <td><label><b>choice2:</b></label></td>
+               <td><input type="text" name="choice2">  
+<b>Mark:</b><input type="text" name="m2">
+</td>
+               
+                 
+                 
+
+                 
+</tr>
+
+
+<tr>
+               <td><label><b>choice3:</b></label></td>
+               <td><input type="text" name="choice3">  
+<b>Mark:</b><input type="text" name="m3">
+</td>
+               
+                 
+                 
+
+                 
+</tr>
+
+
+
+</table>
+      </center>
+
+
+        
+      <button type="submit" style="background-color:#4CAF50;margin-left:auto;margin-right:auto;display:block" align="middle" >Add Question</button>
+    </div>
+
+    <div class="container" >
+      <button type="button"  onclick="document.getElementById('id01').style.display='none'" class="cancelbtn" style="background-color:red;margin-left:auto;margin-right:auto;display:block" align="middle">Cancel</button>
+    </div>
+
+  </form>
+            
+</div>
+<p><form action="stresult.php"><center><button type="submit">TEST RESULTS</button></center></form>
+
+</body>
+</html>

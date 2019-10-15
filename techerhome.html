@@ -1,0 +1,181 @@
+
+<html>
+<head>
+        
+        <style>
+            button {
+    background-color: darkorange;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 25%;
+    text-transform: uppercase;
+    
+}
+
+button:hover {
+    opacity: 0.8;
+}
+         .back{
+background-repeat: no-repeat; 
+width:100%;
+ 
+background-size: cover;
+height: 20%; 
+}
+            h1{
+text-align: center;
+    text-transform: uppercase;
+    color: red;
+}
+            p{
+text-align: center;
+  
+    letter-spacing: 3px;}
+        </style>
+         <style>
+#mySidenav a {
+    position: absolute;
+    left: -110px;
+    transition: 0.3s;
+    padding: 15px;
+    width: 150px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    border-radius: 0 5px 5px 0;
+}
+
+#mySidenav a:hover {
+    left: 0;
+}
+
+#about {
+    top: 20px;
+    background-color: darkorange;
+             }
+
+#logout {
+    top: 80px;
+    background-color: darkorange;
+}
+
+
+</style>
+</head>
+<body background="theme.jpg" class="back">
+
+<h1>OFORI</h1>
+    <p >
+If you want to be Happy, BE !
+</p>
+   
+
+ <script>
+     function check() {
+  if (document.getElementById('pass').value ==
+    document.getElementById('rpass').value) {
+    document.getElementById('message').style.color = 'green';
+    document.getElementById('message').innerHTML = 'Matching';
+  } else {
+    document.getElementById('message').style.color = 'red';
+    document.getElementById('message').innerHTML = 'Not Matching';
+  }
+}
+    </script> 
+    
+
+
+
+
+
+
+
+        <br>
+        <center>
+            
+            <form action="sresult.php" method="post"><button type="submit">View Student's Result</button></form>
+			
+			<p><button onClick="document.getElementById('id02').style.display='block'">ADD STUDENT</button></p><br><br>
+			
+			<div id="id02" class="modal">
+    <form class="modal-content animate" style="background-color:lightgray" action="ssignup.php" method="post">
+    <div class="container" >
+      <b>
+      <table style="width:100%">
+  <th><h2>ADD STUDENT</h2></th>
+  <tr>
+    <td><label> Name</label></td>
+    <td colspan="3"><input type="text"  name="sname" required></td>
+  </tr>
+  <br>
+  <tr>
+    <td><label for="uname">User Name</label></td>
+    <td colspan="3"><input type="text" id="uname" name="uname"required  >
+        <br></td>
+  </tr>
+  <tr>
+    <td><label for="course">Course</label></td>
+    <td colspan="3"><b>
+      <select id="course" name="course">
+        <option value="MCA">MCA</option>
+        <option value="MBA">MBA</option>
+      </select>
+    </b></td>
+    <br>
+  </tr>
+  <tr>
+    <td><label for="sem">Semester</label></td>
+    <td colspan="3"><input type="Number" id="sem" name="sem" required></td>
+    <br>
+  </tr>
+  <tr>
+    <td><label for="batch">Batch</label></td>
+    <td colspan="3"><input type="Number" id="batch" name="batch" required></td>
+    <br>
+  </tr>
+  <tr>
+    <td><label for="gender">Gender</label></td>
+    <td colspan="3"><input type="radio" name="gender" value="m" checked>
+      Male
+      <input type="radio" name="gender" value="f">
+      &nbsp Female
+      <input type="radio" name="gender" value="o">
+      &nbsp Other</td>
+    <br>
+  </tr>
+  <tr>
+    <td><label for="pass">Password</label></td>
+    <td colspan="3"><input type="password" id="pass" name="pass" required  onKeyUp='check();'></td>
+    <br>
+  </tr>
+  <tr>
+    <td><label for="re">Re-Enter Password</label></td>
+    <td colspan="3"><input type="password" id="rpass" name="rpass" required  onKeyUp='check();'>
+        <label> <span id='message'></span></label></td>
+    <br>
+  </tr>
+  <tr>
+    <td><label for="ph">Phone Number</label></td>
+    <td colspan="3"><input type="text" id="pno" name="pno" required></td>
+    <br>
+  </tr>
+  <tr>
+    <td><button type="submit" value="Submit">Submit</button></td>
+	<td><button type="button" onClick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button></td>
+  </tr>
+      </table>
+      </b>
+      
+      </div>
+    
+    </form>
+        </div>
+            
+        
+          </form>
+        </center>
+</body>
+</html>
